@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins',sans-serif;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+html,body{overflow-x: hidden;}
+header .logo{max-width: 120px;}
+header .opc{max-width: 60px;cursor: pointer;}
+header .logo img,
+header .opc img{max-width: 100%;transition: 0.6s;}
+header .opc img:hover{filter: invert(0.6);}
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 40px 100px;
+    z-index: 1000;
+}
+.banner{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 0 100px;
+    background: url(bg.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.banner .conteudo{max-width: 550px;}
+.banner .conteudo h2 span{font-weight: 800;}
+.banner .conteudo h2{
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size:2.5em;
+    letter-spacing: 0.1em;
+    color: #fff;
+}
+.banner .conteudo p{
+    font-size: 1.2em;
+    font-weight: 300;
+    letter-spacing: 0.02em;
+    line-height: 1.5em;
+    color: #fff;
+    margin: 15px 0 35px;
+}
+.play img{margin-right: 10px;max-width: 50px;transition:0.6s;}
+.play:hover,.play img:hover{filter: invert(0.6);}
+.play{
+    position: relative;
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 500;
+    text-decoration: none;
+    letter-spacing:2px;
+    font-size: 1.2em;
+    transition:0.6s;
+}
+.social li{list-style: none;transition:0.6s;}
+.social li a{text-decoration: none;}
+.social li:hover{filter: invert(0.7);}
+.social li a img{filter: invert(1);transform: scale(0.6);}
+.social{
+    position: absolute;
+    top: 50%;
+    transform:translateY(-50%);
+    right: 1%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction: column;
+}
+.passar{
+    position: absolute;
+    bottom:50px;
+    left:calc(50% - 250px / 2);
+    width:250px;
+    height:150px;
+    background:url(hack.jpg);
+    background-size: cover;
+    cursor: pointer;
+    animation: animado 25s infinite;
+    border:2px outset #111;
+}
+@keyframes animado{
+    0%,100%{background-position: top;}
+    45%,55%{background-position: bottom;}
+}
+.trailer video{max-width: 350px;outline: none;}
+.trailer.ativar{visibility:visible;opacity: 1;}
+.trailer{
+    position: fixed;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 100000;
+    background: rgba(0, 0, 0, .9);
+    width: 100%;
+    height: 100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    visibility: hidden;
+    opacity:0;
+    transition: 0.6s;
+}
+.trailer .fechar:hover{filter: invert(0.7);}
+.trailer .fechar{
+    position: absolute;
+    top:30px;
+    right: 30px;
+    cursor: pointer;
+    filter: invert(1);
+    max-width: 30px;
+    transition: 0.6s;
+}
+@media (max-width:900px) {
+    header{padding: 20px 50px;}
+    header .logo{max-width: 80px;}
+    header .opc{max-width: 40px;}
+    .banner{padding: 100px 50px;}
+    .banner .conteudo h2{font-weight: 400;font-size:2em;letter-spacing: 0.05em;}
+    .banner .conteudo p{font-size: 1em;}
+    .passar{position: relative;bottom: initial;left:0;width:250px;height:150px;margin:20px 0;}
+    .trailer video{max-width: 90%;outline: none;}
+    .social li{list-style:none;margin:0 5px;}
+    .social{
+        position: absolute;
+        top:initial;
+        right:initial;
+        margin-top: 40px;
+        transform: translateY(-50%);
+        display: flex;
+        justify-content:center;
+        align-items:center;
+        flex-direction: row;
+    }
+}

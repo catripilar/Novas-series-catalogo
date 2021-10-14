@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeFlix</title>
+    <link rel="stylesheet" href="catalogo.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo"><img src="imagens/logo.png"></a>
+        <div class="opc"><a href="https://github.com/catripilar"><img src="imagens/toggle.png"></a></div>
+    </header>
+    <div class="banner">
+        <div class="conteudo">
+            <h2>um <span>Código</span> por vez</h2>
+            <p>"Você sabia que existem magos no nosso mundo de verdade?
+               Me pergunte como, eu diria: Imagine viver em um mundo
+               sem celular ou computador? Eles estão por toda parte,
+               Caso você não os veja.. Talvez esteja mais perto do que imagina..."
+            </p>
+            <a href="#" class="play" onclick="abrir();"><img src="imagens/play.png">Assistir Trailer</a>
+            <div class="passar" onclick="abrir();"></div>
+            <ul class="social">
+                <li><a href="#"><img src="imagens/facebook.png"></a></li>
+                <li><a href="#"><img src="imagens/instagram.png"></a></li>
+                <li><a href="#"><img src="imagens/twitter.png"></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="trailer">
+        <video src="imagens/cam.mp4" controls="true" type="video/mp4" autoplay="autoplay"></video>
+        <img src="imagens/close.png" class="fechar" onclick="abrir();">
+    </div>
+    <script>
+        function abrir(){
+            var trailer = document.querySelector('.trailer');
+            var video = document.querySelector('video');
+            trailer.classList.toggle('ativar');
+            video.currentTime = 0;
+            video.pause();
+        }
+    </script>
+</body>
+</html>
